@@ -12,6 +12,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.iata.ndc.ClientException;
 import org.iata.ndc.NdcClient;
 import org.iata.ndc.schema.AirShoppingRQ;
+import org.iata.ndc.schema.OrderCreateRQ;
+import org.iata.ndc.schema.OrderViewRS;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +43,16 @@ public class HomeRestController {
  		AirShoppingRQ request = (AirShoppingRQ) jaxbUnmarshaller.unmarshal(file);
  		NdcClient client = new NdcClient("http://iata.api.mashery.com/athena/api", "f6g8wh9pymvvmerp25t4ehzv");
  		return new AirShoppingResonseMapper().mapAirShoppingResponse(client.airShopping(request));
+    }
+    
+    @RequestMapping(value = "/flight/book", method = RequestMethod.GET)
+    public String bookFlight() throws JAXBException, ClientProtocolException, ClientException, IOException {
+ 	   File file = new File("C:\\OrderCreate.xml");
+ 		JAXBContext jaxbContext = JAXBContext.newInstance(OrderCreateRQ.class);
+ 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+ 		OrderCreateRQ request = (OrderCreateRQ) jaxbUnmarshaller.unmarshal(file);
+ 		NdcClient client = new NdcClient("http://iata.api.mashery.com/athena/api", "f6g8wh9pymvvmerp25t4ehzv");
+ 		OrderViewRS orderViewRS = client.orderCreate(request);
+ 		return orderViewRS.getResponse().getOrder().get(0).getBookingReferences().get(0).getID();
     }
 }
