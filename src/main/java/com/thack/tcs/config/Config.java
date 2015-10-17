@@ -1,16 +1,16 @@
-package com.outbottle.config;  
+package com.thack.tcs.config;  
   
-import org.springframework.context.annotation.Bean;  
-import org.springframework.context.annotation.ComponentScan;  
-import org.springframework.context.annotation.Configuration;  
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;  
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.JstlView;  
-import org.springframework.web.servlet.view.UrlBasedViewResolver;  
+import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
   
 @Configuration
-@ComponentScan("com.outbottle")
+@ComponentScan("com.thack.tcs")
 @EnableWebMvc   
 public class Config extends WebMvcConfigurerAdapter {  
       
@@ -24,7 +24,7 @@ public class Config extends WebMvcConfigurerAdapter {
     }  
     
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/*");
     }
 }  

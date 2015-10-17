@@ -13,6 +13,7 @@
         <spring.version>4.0.1.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <javax.servlet.version>3.0.1</javax.servlet.version>
+		<jackson.version>2.4.4</jackson.version>
     </properties>
 
     <dependencies>
@@ -58,7 +59,17 @@
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
-
+		<!-- Rest Dependencies -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
     </dependencies>
 
