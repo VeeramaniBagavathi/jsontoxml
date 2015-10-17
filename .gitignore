@@ -1,0 +1,13 @@
+target/
+Servers/
+.settings/
+.clover/
+.metadata/
+*.class
+*.jar
+*.pmd
+*.zip
+*.MF
+.project
+.classpath
+.checkstyle
