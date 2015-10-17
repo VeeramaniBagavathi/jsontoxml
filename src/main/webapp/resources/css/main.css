@@ -1,0 +1,3049 @@
+/*-- Stuff --*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+svg {
+    width: 20px;
+    height: auto;
+    max-height: 25px;
+    /*android bug*/
+}
+
+figure {
+    width: 20px;
+    height: 20px;
+    background-color: #959595;
+    background-image: url(../img/mis-silhouette.jpg);
+    /*background: -webkit-linear-gradient(-45deg, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);*/
+    margin: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+}
+
+figure.initiails {
+    font-size: 1em;
+    background: #8497A0;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 1.7em;
+    text-align: center;
+    width: 1.7em;
+    height: 1.7em;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.divider {
+    margin: 1.5em 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.margin {
+    margin-top: 20px;
+}
+
+.margin2{
+     margin-top: 20px;
+     margin-bottom: 10px;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.nomarg {
+    margin-top: 0 !important;
+    margin: 0 !important;
+}
+
+.nomargtb {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.topmarg {
+    margin-top: 1px;
+}
+
+.grey {
+    color: #8497A0;
+}
+
+p.orange,
+span.orange {
+    color: #F18E4A;
+}
+
+.standard,
+.standardMob {
+    padding: 0 10px 0 10px;
+}
+
+article {}
+
+button {
+    border: none;
+    background-color: #8497A0;
+    border-radius: 0;
+    color: #FFFFFF;
+    height: 56px;
+    padding: 1px 20px;
+    min-width: 250px;
+    outline: none;
+}
+
+button.small {
+    display: inline-block;
+    border: none;
+    height: inherit;
+    font-size: 1em;
+    padding: 6px 8px;
+    min-width: inherit;
+}
+
+/* TODO - update colors */
+
+button:disabled {
+ opacity: .33;
+}
+
+.required {
+  color: #FF1D25 !important;
+  position: absolute;
+  bottom: -50%;
+}
+
+button.round {
+    border-radius: 3px;
+}
+
+button.small svg {
+    height: 1em;
+    vertical-align: top;
+}
+
+button.orange {
+    background-color: #F18E4A;
+    vertical-align: top;
+}
+
+button.orange:active {
+    border-bottom: 2px solid #B66F3D;
+    border-top: 2px solid transparent;
+    background-color: #E28648;
+}
+
+button.light {
+    color: #48484B;
+    background-color: #D3E0E7;
+}
+
+button.ultralight {
+    color: #48484B;
+    background-color: transparent;
+    border: 1px solid #8497A0;
+}
+
+button.free {
+    min-height: inherit;
+    min-width: inherit;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    height: inherit;
+    width: inherit;
+    color: #8497A0;
+}
+
+button.quickPay {
+    color: #F18E4A;
+}
+
+
+/*-- Styles --*/
+
+html {
+    color: #222;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+  height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+button,
+input {
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 0.82em;
+    font-weight: 400;
+    color: #C2CED3;
+    margin: 0;
+}
+
+.semi {
+    font-weight: 400;
+}
+
+p.small {
+    font-size: 0.82em;
+    margin: 0;
+}
+
+p.wrapped {
+  padding: 0.5em 0 0 0.5em;
+}
+
+.breathing {
+    font-size: 0.82em;
+    font-weight: 300;
+    color: #C2CED3;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.nobg {
+    background-color: transparent !important;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+    display: none;
+}
+
+
+h2 input[type=checkbox] + label {
+    vertical-align: middle;
+    margin-left: 0.2em;
+    margin-top: -2px;
+}
+
+
+
+
+
+/*-- Specific to Checkbox Toggles --*/
+
+input.toggle {
+    visibility: hidden;
+    display: none;
+}
+
+input.toggle + label {
+    width: 37px;
+    height: 24px;
+    border: 1px solid #8497A0;
+    position: relative;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    background: #FFFFFF;
+}
+
+input.toggle + label:active {
+    background-image: none;
+}
+
+input.toggle + label:after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 1px solid #8497A0;
+    border-radius: 10px;
+    margin: 1px;
+    margin-left: 2px;
+    -webkit-transition: margin-left 0.2s ease;
+    transition: margin-left 0.2s ease;
+}
+
+input.toggle:checked + label {
+    background: #2ecc71;
+    border-color: #2ecc71;
+}
+
+input.toggle:checked + label:after {
+    margin-left: 14px;
+    border-color: #FFFFFF;
+}
+
+
+/*-- Input & Input Wrapper (for underlined input style) --*/
+
+.inputWrapper {
+    position: relative;
+    margin-top: 1.3em;
+    border-bottom: 1px solid #BBC9D1;
+}
+
+.rate .inputWrapper {
+    margin-top: 0;
+}
+
+.inputWrapper:before,
+.inputWrapper:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: #BBC9D1;
+    bottom: 0;
+}
+
+.inputWrapper:before {
+    left: 0;
+}
+
+.inputWrapper:after {
+    right: 0;
+}
+
+.inputWrapper .hint,
+.inputWrapper label {
+    position: absolute;
+    top: 0;
+    right: 9px;
+    font-size: 0.82em;
+    opacity: 0.5;
+}
+
+input,
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background: none;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    font-size: 1em;
+}
+
+.inputWrapper select {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 16px 0 6px;
+    width: 100%;
+}
+
+input.look,
+textarea.look {
+    background-color: #FFC3BD;
+}
+
+.fieldRow-2 .inputWrapper {
+    float: left;
+    width: 49%;
+}
+
+.fieldRow-2 .inputWrapper:nth-child(2) {
+    margin-left: 2%;
+}
+
+.fieldRow-3 .inputWrapper {
+    float: left;
+    width: 32%;
+}
+
+.fieldRow-3 .inputWrapper:last-child,
+.fieldRow-3 .inputWrapper:nth-child(2) {
+    margin-left: 2%;
+}
+
+.miniBtn {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+.menuIcon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.menuIcon .line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #48484B;
+    border-radius: 3px;
+    top: 3px;
+}
+
+.menuIcon .first {
+    -webkit-transition: all 0.5s ease;
+}
+
+.menuIcon .second {
+    -webkit-transition: width 0.5s ease;
+    margin-top: 6px;
+}
+
+.menuIcon .third {
+    -webkit-transition: all 0.5s ease;
+    margin-top: 12px;
+}
+
+.open .menuIcon .first {
+    -webkit-transform: rotate(-45deg);
+    margin-top: 6px
+}
+
+.open .menuIcon .second {
+    width: 0;
+}
+
+.open .menuIcon .third {
+    -webkit-transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.strip {
+    background-color: #EBEFF2;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 1px;
+    position: relative;
+}
+
+.strip h2,
+.strip h1,
+.strip p {
+    display: inline-block;
+}
+
+.wrapper {
+    position: relative;
+}
+
+header nav {
+    /* color: #fff; */
+     background-color: white; 
+    /* width: 100%; */
+     height: 0px; 
+    /* line-height: 56px; */
+	}
+
+.tabGroup {
+    padding: 7px 5px;
+    background-color: #FFFFFF;
+}
+
+.tabGroup .tab {
+    height: 30px;
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    padding: 2px 0;
+    background-color: #EBEFF2;
+    border-top: 1px solid #D3E0E7;
+    border-bottom: 1px solid #D3E0E7;
+    color: #8497A0;
+}
+
+.tabGroup.two .tab {
+    width: 50%;
+}
+
+.tabGroup .tab.active {
+    background-color: #FFFFFF;
+}
+
+.tabGroup .tab svg {
+    height: 22px;
+    margin-right: 0.3em;
+}
+
+.tabGroup .tab span {
+    font-size: 0.82em;
+    margin-top: 1px;
+    vertical-align: middle;
+}
+
+
+/*.tabGroup .tab:first-child{
+border-radius: 3px 0 0 3px;
+border-left: 1px solid #D3E0E7;
+}
+.tabGroup .tab:last-child{
+border-radius: 0 3px 3px 0;
+border-right: 1px solid #D3E0E7;
+}*/
+
+.tabGroup.inner a:first-child .tab {
+    border-radius: 3px 0 0 3px;
+    border-left: 1px solid #D3E0E7;
+}
+
+.tabGroup.inner a:last-child .tab {
+    border-radius: 0 3px 3px 0;
+    border-right: 1px solid #D3E0E7;
+}
+
+
+/*-- Tab Groups full nav --*/
+
+.tabGroup.full {
+    padding: 0;
+}
+
+.tabGroup.full .tab {
+    height: 41px;
+    padding: 8px 0;
+    background-color: #8497A0;
+    border: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+}
+
+.tabGroup.full .tab svg {
+    margin-right: 3px;
+}
+
+.tabGroup.full .tab span {
+    display: inline;
+    vertical-align: middle;
+}
+
+#menu {}
+
+.container.level2 .tabGroup.inner {
+    display: none;
+}
+
+.container.level2 .mainView {}
+
+
+.mainView {
+        margin-bottom: 10px;
+}
+
+/*-- SVG States --*/
+
+.active svg.activities path {
+    stroke: #48484B;
+}
+
+.active svg.activities path.in {
+    fill: #48484B;
+}
+
+.active svg.settings path {
+    stroke: #48484B;
+    fill: #48484B;
+}
+
+.active svg.settings circle {
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+}
+
+.active svg.groups path,
+.active svg.groups circle {
+    fill: #FFFFFF;
+}
+
+.active svg.profile path,
+.active svg.profile circle {
+    fill: #FFFFFF;
+}
+
+.active svg.flag polyline {
+    fill: #FFFFFF;
+}
+
+header {
+    background-color: #8497A0;
+    color: #FFFFFF;
+}
+
+.infoBar {
+    height: 45px;
+    position: relative;
+}
+
+.infoBar .wrapper {
+    position: relative;
+    padding: 1px;
+}
+
+.infoBar .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 45px;
+}
+
+.infoBar .middle {
+    text-align: center;
+}
+
+.infoBar .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.infoBar figure {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 7px;
+}
+
+.infoBar .miniLink {
+    width: 60px;
+    display: table-cell;
+    height: 44px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.infoBar .miniBtn {
+    padding: 7px 5px 5px;
+    margin: 5px;
+}
+
+.infoBar h1 {
+    margin: 15px 0 0 0;
+}
+
+.level2 .infoBar {
+    background-color: #EBEFF2;
+    margin-top: 1px;
+}
+
+.infoBar .backLink {
+    height: 45px;
+    padding: 13px 0 0 5px;
+}
+
+.backLink {}
+
+.infoBar .backLink svg {
+    height: 20px;
+}
+
+
+/*-- Activity Info Nav--*/
+
+.activityInfo {
+    background-color: #D3E0E7;
+}
+
+.activityInfo .item {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    padding: 15px 5px;
+    color: #8497A0;
+}
+
+.activityInfo .item span {
+    cursor: pointer;
+}
+
+.activityInfo .item.active {
+    color: #48484B;
+    font-weight: 600;
+}
+
+
+/*-- Activity Details --*/
+
+.activityDetails {
+    position: relative;
+    overflow: hidden;
+}
+
+.activityDetails figure {
+    height: 200px;
+    width: 100%;
+}
+
+.activityDetails .simpleDetails {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    top: 160px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 9px 5px 0 5px;
+}
+
+.activityDetails .simpleDetails h2 {
+    display: none;
+}
+
+.activityDetails .simpleDetails .date {
+    display: inline-block;
+}
+
+.activityDetails .simpleDetails .price {
+    position: absolute;
+    right: 0;
+    top: 11px;
+}
+
+.activityDetails .simpleDetails .pill {
+    margin-right: 15px;
+}
+
+.activityDetails .block {
+    display: none;
+}
+
+.activityDetails.overview .block.overview,
+.activityDetails.details .block.details,
+.activityDetails.extras .block.extras {
+    display: inherit;
+}
+
+.extras .extra {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #EBEFF2;
+    margin-top: 1px;
+}
+
+.extras .title {
+    display: none;
+}
+
+.extras .extra label {
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.extras .extra h2 {
+    margin: 0;
+    display: inline-block;
+}
+
+.extra.read p {
+    margin: 0.5em 0;
+}
+
+.extras .extra .desc {
+    display: none;
+}
+
+.extras .extra .pill {}
+
+.activityDetails .details {
+    padding-top: 5px
+}
+
+.pill {
+    display: inline-block;
+    border: 1px solid #8497A0;
+    padding: 2px;
+}
+
+.pill.orange {
+    color: #2ECC71;
+    border: 1px solid #2ECC71;
+}
+
+.pill.grey {
+    color: #FFFFFF;
+    font-weight: 300;
+    border: 1px solid #8497A0;
+    background-color: #8497A0;
+}
+
+.pill.green {
+    color: #2ECC71;
+    border: 1px solid #2ECC71;
+}
+
+.pill.open {
+    border: none;
+    padding: 0;
+}
+
+.pill.round {
+    border-radius: 3px;
+}
+
+.pill svg {
+    height: 15px;
+    vertical-align: top;
+    width: 15px;
+    margin-right: 0.2em;
+}
+
+.pill.open svg {
+    height: 19px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.pill .highlightGray {
+    margin-left: 0.1em;
+    margin-right: -0.1em;
+    border-radius: 3px;
+}
+
+.highlightGray {
+    padding-left: 0.3em;
+    background-color: #8497A0;
+    padding-right: 0.3em;
+    color: #fff;
+}
+
+
+/*-- Folks Table --*/
+
+.folksTable {
+    border-top: 1px solid #D3E0E7;
+}
+
+.folksTable .miniHeader {
+    font-size: 0.82em;
+    position: relative;
+    margin-top: 5px;
+    color: #8497A0;
+}
+
+.folksTable .miniHeader .name {
+    padding-left: 35px;
+}
+
+.folksTable .miniHeader .status {
+    position: absolute;
+    right: 0;
+    width: 4em;
+    text-align: center;
+}
+
+.folksTable .row {
+    position: relative;
+    min-height: 30px;
+    margin-top: 1em;
+}
+
+.folksTable .row figure {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.folksTable .row h2 {
+    padding: 8px 60px 0 35px;
+    margin: 0;
+}
+
+.folksTable .row .remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.82em;
+    text-align: center;
+    color: #8497A0;
+}
+
+.folksTable .row .status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.82em;
+    text-align: center;
+    width: 4em;
+}
+
+.folksTable .status svg {
+    height: 16px;
+    width: auto;
+}
+
+.folksTable .status span {
+    display: block;
+}
+
+
+/*-- List (Activities) --*/
+
+.list .row {
+    height: 83px;
+    background: #EBEFF2;
+    margin-top: 1px;
+    position: relative;
+    padding: 15px 0 0 5px;
+}
+
+.list .row figure {
+    width: 54px;
+    height: 54px;
+    float: left;
+    border-radius: 27px;
+}
+
+.list .row .info {
+    padding-left: 65px;
+    padding-right: 0.5em;
+    margin-right: 17%;
+    position: relative;
+    height: 65px;
+}
+
+.list .row h2 {
+    margin: 0 0 7px 0;
+    line-height: 1.17em;
+    max-height: 29px;
+    overflow-y: hidden;
+}
+
+.list .row h2 .small,
+h2 .small {
+    font-size: 0.82em;
+    font-weight: 400;
+}
+
+.list .row .date {
+    position: absolute;
+    right: 17.5%;
+    top: 0.25em;
+}
+
+.list .row .right {
+    width: 17%;
+    height: 100%;
+    background-color: #D3E0E7;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.list .row .arrow {
+    height: 1em;
+    width: 0.8em;
+    vertical-align: top;
+}
+
+.list.groups .row .info {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.list .row .timeStamp {
+    position: absolute;
+    font-size: 0.82em;
+    top: 1em;
+    right: 1.5em;
+}
+
+
+/*-- List Past --*/
+
+.list.past .row {
+    height: 55px;
+}
+
+.list.past .row figure {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+figure {}
+
+.list.past .row .info {
+    padding-left: 65px;
+    margin-right: 0;
+}
+
+
+/*-- List Tip --*/
+
+.tip {
+    margin-bottom: 3em;
+    padding-top: 0.82em;
+    color: #8497A0;
+}
+
+.tip svg {
+    position: absolute;
+    left: 0;
+    top: -7px;
+}
+
+.tip .info {
+    display: inline;
+    position: relative;
+}
+
+.tip span {
+    padding-left: 30px;
+    text-align: left;
+}
+
+
+/*-- Activity Head - Initial--*/
+
+.activityHead {}
+
+.activityHead .upper {
+    overflow: hidden;
+}
+
+.activityHead .upper .inner {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    background-color: #EBEFF2;
+}
+
+.activityHead .upper .title {
+    float: left;
+    width: 75%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.activityHead .upper .statuses {
+    display: none;
+    width: 25%;
+    position: absolute;
+    left: 75%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease;
+}
+
+.activityHead .statuses .status {
+    display: none;
+    text-align: center;
+    padding: 8px 0 0;
+}
+
+.activityHead .statuses .status svg {
+    width: 1.8em;
+    height: auto;
+}
+
+.activityHead .statuses .status span {
+    display: block;
+    margin-top: 5px;
+}
+
+.activityHead .upper .options {
+    position: absolute;
+    width: 30%;
+    left: 100%;
+    height: 100%;
+    background-color: #EBEFF2;
+    -webkit-transition: all 0.5s ease;
+}
+
+.activityHead .options .option {
+    display: none;
+    text-align: center;
+}
+
+.activityHead .upper .option button.free {
+    display: inline-block;
+    padding: 9px;
+}
+
+.activityHead .upper .option button.free svg {
+    width: 1.6em;
+    height: auto;
+}
+
+.activityHead .upper .option button.free span {
+    display: block;
+    margin-top: 5px;
+    color: #8497A0;
+}
+
+.activityHead .upper .option.join button.free span {
+    color: #2ECC71;
+}
+
+.activityHead .upper .cancel {
+    position: absolute;
+    width: 30%;
+    left: 100%;
+    height: 100%;
+    background-color: #EBEFF2;
+    -webkit-transition: all 0.5s ease;
+    text-align: center;
+}
+
+.activityHead .lower {
+    background-color: #EBEFF2;
+    padding-bottom: 10px;
+}
+
+.activityHead .lower .left,
+.activityHead .lower .right {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.activityHead .lower button {
+    display: inline-block;
+    padding: 5px 8px;
+    min-width: 125px;
+    width: 65%;
+    background-color: #D3E0E7;
+    border-radius: 3px;
+    vertical-align: middle;
+    max-height: 37px;
+}
+
+.activityHead .lower button svg {
+    width: 1.6em;
+    height: auto;
+    margin-right: 5px;
+}
+
+.activityHead .lower .right button {
+    background-color: #2ECC71;
+    color: #FFFFFF;
+}
+
+.activityHead .pay2 {
+    display: none;
+}
+
+.activityHead.joined .pay2 {
+    display: inherit;
+}
+
+
+/*-- Activity Head - Joined--*/
+
+.activityHead.joined .lower {
+    display: none;
+}
+
+.activityHead.joined .statuses {
+    display: inherit;
+}
+
+.activityHead.joined .statuses .statusJoined {
+    display: inherit;
+    color: #FFFFFF;
+}
+
+.activityHead.joined .options .leave {
+    display: inherit;
+}
+
+.activityHead.joined .upper .inner {
+    background-color: #2ECC71;
+    color: #FFFFFF;
+}
+
+
+/*-- Activity Head - Didnt Join--*/
+
+.activityHead.didnt .lower {
+    display: none;
+}
+
+.activityHead.didnt .statuses {
+    display: inherit;
+}
+
+.activityHead.didnt .statuses .statusDidnt {
+    display: inherit;
+    color: #8497A0;
+}
+
+.activityHead.didnt .options .join {
+    display: inherit;
+}
+
+.activityHead.didnt .upper .inner {
+    background-color: #D3E0E7;
+}
+
+
+/*-- Activity Head - Changing--*/
+
+.activityHead.changing .upper .inner .title {
+    display: none;
+}
+
+.activityHead.changing .statuses {
+    left: 0;
+    width: 33.333%;
+}
+
+.activityHead.changing .options {
+    left: 33.333%;
+    width: 33.333%;
+}
+
+.activityHead.changing .cancel {
+    left: 66.666%;
+    width: 33.333%;
+}
+
+
+/*--*/
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    display: none;
+    -o-transition: -o-transform 0.2s linear;
+    -moz-transition: -moz-transform 0.2s linear;
+    -webkit-transition: -webkit-transform 0.3s linear;
+    -o-transform: scale(0.1, 0.1);
+    -moz-transform: scale(0.1, 0.1);
+    -webkit-transform: scale(0.1, 0.1);
+}
+
+.page.visible {
+    -o-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+.starPad {
+    padding: 9px 5px 5px 5px;
+}
+
+section.branding {
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section.branding img {
+    float: right;
+    height: 1.5em;
+}
+
+.profileHead {}
+
+.profileHead .infoBar {
+    background-color: transparent;
+}
+
+.userBasic {
+    z-index: 2;
+    margin-bottom: 2em;
+}
+
+.userBasic figure {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 60px;
+    border: 3px solid #FFFFFF;
+    background-image: url(../img/mis-art.jpg);
+}
+
+.userBasic figure .changeImage {
+    position: absolute;
+    left: 50%;
+    margin-left: -4.8em;
+    padding: 0;
+    font-size: 0.82em;
+    bottom: -22px;
+    white-space: nowrap;
+}
+
+.userBasic .fields {
+    width: 70%;
+    margin: 20px auto 0;
+    background-color: transparent;
+}
+
+.fields {
+    padding: 10px;
+    margin-top: 1px;
+    background-color: #EBEFF2;
+}
+
+.fields.rate {
+    padding-top: 0;
+}
+
+.fields h2 {
+    color: #8497A0;
+    margin-bottom: 1.5em;
+}
+
+.fields.heading h2 {
+    color: inherit;
+}
+
+.fields p {
+    color: #8497A0;
+}
+
+.fields.summary p {
+    color: inherit;
+    margin: 0.5em 0 0;
+}
+
+.fields.summary p.note {
+    margin: 1em 0;
+}
+
+.fields.summary p.orange {
+    color: #F18E4A;
+}
+
+.fields.summary .part {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.fields p.fieldsLinks {
+    color: #8497A0;
+    margin-top: 2em;
+    font-size: 0.82em;
+    text-align: right;
+}
+
+.savedCard {
+    margin-bottom: 2em;
+}
+
+.savedCard h2 {
+    color: inherit;
+    margin-bottom: 0.5em;
+}
+
+.savedCard p {
+    color: #8497A0;
+}
+
+.savedCard .fieldsLinks {
+    margin: 0.9em 0 0;
+}
+
+.savedCard .pill {
+    margin-right: 0.5em;
+}
+
+.fields.orange {
+    background-color: #F18E4A;
+    color: #FFFFFF;
+}
+
+.orange .pill {
+    border-color: #FFFFFF;
+}
+
+.orange h2,
+.orange .fieldsLinks,
+.orange p {
+    color: #FFFFFF;
+}
+
+.toRight {
+    float: right;
+    margin-top: -0.25em;
+}
+
+.toRightS {
+    float: right;
+}
+
+.toLeftS {
+    float: left;
+}
+
+.toRightstrip {
+    float: right;
+    margin-top: 10px;
+}
+
+
+/* email subscribe form */
+#recieveMail {
+  padding-right: 70px;
+  position: relative;
+}
+
+#recieveMail label {
+  /*transform: translateY(7px);
+  margin-right: 5px*/
+  position: absolute;
+  right: 10px;
+  top: -3px;
+}
+
+
+
+/*-- Settings Section --*/
+
+.settingsHead {
+    padding-top: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.settingsHead .image {}
+
+.settingsHead .image figure {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.settingsHead .image figure .changeImage {
+    position: absolute;
+    text-align: center;
+    left: 150px;
+    top: 20px;
+    width: 90px;
+    color: #8497A0;
+}
+
+.settingsHead .name {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.settingsHead .name .inputWrapper {
+    width: 85%;
+    display: inline-block;
+    margin-right: 2%;
+    margin-bottom: 1.5em;
+}
+
+.settingsBody {}
+
+.control {
+    position: relative;
+    padding: 15px 10px 0 1em;
+    background-color: #EBEFF2;
+    height: 45px;
+}
+
+.control p {
+    margin: 0;
+}
+
+.control h2 {}
+
+.control .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    padding: 10px 10px 10px 0;
+    text-align: right;
+}
+
+
+/*-- Notifications --*/
+
+section.notifications {}
+
+section.notifications .row {
+    padding: 19px 0 10px;
+    min-height: 70px;
+    border-bottom: 1px solid #EBEFF2;
+}
+
+section.notifications .row .left {
+    float: left;
+    width: 45px;
+    height: 26px;
+    display: table-cell;
+    text-align: center;
+}
+
+section.notifications .row .left svg {
+    vertical-align: middle;
+    max-height: 26px;
+    width: 24px;
+}
+
+section.notifications .row .right {
+    padding-left: 55px;
+}
+
+section.notifications .row p {
+    margin: 0;
+}
+
+section.notifications .row .right figure {
+    float: left;
+}
+
+section.notifications .row p.person {
+    padding-left: 30px;
+}
+
+.wideOnly {
+    display: none;
+}
+
+
+/*-- Pay Block on Activities --*/
+
+.container.initial .strip {
+    background-color: transparent;
+}
+
+.payBlock .backLink {
+    display: none;
+}
+
+.payBlock .backLink {
+    position: absolute;
+    padding: 11px 12px;
+}
+
+.payBlock .backLink svg {
+    height: 1.8em;
+}
+
+.container.paying .tabGroup,
+.container.paying .list.activities {
+    display: none;
+}
+
+.container.paying .payBlock {
+    margin-top: 0;
+}
+
+.others {
+    margin-top: 1em;
+}
+
+.read .others {
+    margin-top: 0.5em;
+}
+
+.others svg {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.others span {
+    vertical-align: middle;
+    color: #8497A0;
+}
+
+section.loginreg {
+    margin: 1.2em 1em;
+}
+
+section.loginreg .fields {
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 15px 25px;
+}
+
+.loginButton {
+    margin-top: 0.4em;
+}
+
+
+/*-- Inner Header --*/
+
+.innerHeader {
+    padding: 1px;
+    position: relative;
+}
+
+.innerHeader .left,
+.strip .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px;
+}
+
+.innerHeader .middle {
+    text-align: center;
+}
+
+.innerHeader .middle h1 {}
+
+.innerHeader .backLink svg,
+.strip .backLink svg {
+    height: 24px;
+}
+
+.inviteBlock {}
+
+.inviteBlock .folksTable {
+    border: none;
+    margin: 2em 0 1.5em;
+}
+
+.inviteBlock .fields {}
+
+.inviteBlock .fields.invite {
+    padding-bottom: 2em;
+}
+
+.inviteBlock .invited {}
+
+.tile {
+    padding: 2em 10px 1.5em;
+    margin-top: 1px;
+    background-color: #EBEFF2;
+}
+
+.tile.transparent {
+    background-color: transparent;
+}
+
+.tile h2 {
+    color: #8497A0;
+    margin-bottom: 1.5em;
+}
+
+.tile p {
+    color: #8497A0;
+}
+
+
+/*-- Holding Page --*/
+
+.holdingPage {
+    text-align: center;
+    padding: 50px 10px 10px;
+}
+
+.holdingPage svg {
+    width: 43px;
+    margin: 0 auto;
+    display: block;
+    max-height: 43px;
+}
+
+.holdingPage.green {
+    color: #2ECC71;
+}
+
+.holdingPage.red {
+    color: #FF1D25;
+}
+
+.holdingPage p {
+    text-align: left;
+    max-width: 260px;
+    margin: 1.5em auto 2em;
+}
+
+.card {
+    margin: 0.5em 0;
+}
+
+.card h2 {
+    display: inline-block;
+}
+
+.card button {
+    margin-top: 2px;
+    float: right;
+    padding: 0.7em 1.5em;
+}
+
+.control.single {
+    padding: 15px 60px 15px 0;
+    text-align: right;
+    width: 100%;
+}
+
+.control.single p {
+    margin: 0;
+}
+
+img.error {
+    border-radius: 55px;
+}
+
+.share svg {
+    height: 25px;
+    width: auto;
+    margin: 10px
+}
+
+
+/*-- Right buttons styles --*/
+
+.rightButton {
+    height: 100%;
+    padding: 22px 2px;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.82em;
+    text-align: center;
+    line-height: 1.1em;
+}
+
+.rightButton.simple {
+    padding: 35px 2px 0;
+}
+
+.rightButton svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+
+.rightButton span {}
+
+
+/*-- Right buttons Status --*/
+
+.list .row .right.status {
+    background-color: transparent;
+}
+
+.status .rightButton {}
+
+.status .rightButton svg {
+    width: 16px;
+    height: 16px
+}
+
+.status .rightButton span {}
+
+.miniStatus {
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    margin-left: 20px;
+}
+
+.miniStatus svg {
+    width: 14px;
+    height: 14px;
+}
+
+.unread {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #4085F4;
+    display: inline-block;
+}
+
+.decide {
+    color: ;
+}
+
+.steps {
+    position: absolute;
+    top: 16px;
+    right: 1em;
+}
+
+.steps .step {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #8497A0;
+    color: #8497A0;
+    border-radius: 1em;
+}
+
+.steps .step.active {
+    color: #FFFFFF;
+    background-color: #8497A0;
+}
+
+.logout {
+    margin: 14px;
+}
+
+p.withFavs img {
+    max-width: 3.5em;
+    max-height: 1.5em;
+}
+
+.hintLink {
+    cursor: pointer;
+}
+
+.hintWrap {
+    display: none;
+}
+
+.hintBlock {
+    top: 0;
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    display: table;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.hintBlock .spacer {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.hintBlock .content {
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #8497A0;
+    padding: 3em 2em 4em;
+    /*border-top: 3px solid #77878E;*/
+    position: relative;
+}
+
+.hintBlock svg {
+    width: 2em;
+}
+
+
+.hintBlock svg.big {
+      width: 134px;
+  max-height: 56px;
+}
+
+.hintBlock .close {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background-color: #636467;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.hintBlock .close svg {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+}
+
+.hintBlock p {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.dummy .infoBar h1 {
+    display: inline-block;
+    min-width: 17em;
+    height: 1.2em;
+    background-color: #BABABE;
+}
+
+.dummy .tabGroup .tab span {
+    width: 5em;
+    margin: 4px auto 0;
+    height: 0.85em;
+    background-color: #BABABE;
+    display: inline-block;
+}
+
+.dummy .infoBar figure {
+    background: #BABABE;
+}
+
+.dummy svg.groups path,
+.dummy svg.groups circle,
+.dummy svg.flag polyline,
+.dummy svg.profile path,
+.dummy svg.profile circle {
+    stroke: #BABABE;
+    fill: #BABABE;
+}
+
+
+/*-- Specific to MiS Spinner -- */
+
+.misSpinner {
+    width: 85px;
+    height: 85px;
+    position: relative;
+    margin: 10em auto 0;
+}
+
+.misSpinner .mis-logo {
+    background: transparent;
+    background-image: url(https://makeitsocial.com/media/img/misLogo-01.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 25%;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.misSpinner .circle1,
+.misSpinner .circle2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    background-color: #F18E4A;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.misSpinner .circle2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.7)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.misSpinner h2 {
+    position: absolute;
+    bottom: -50px;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+}
+
+.lightGrey {
+    background-color: #EBEFF2;
+}
+
+.orangeBg {
+    /* background-color: #F18E4A; */
+}
+
+h2 .remove {
+    position: absolute;
+    color: #8497A0;
+}
+
+
+/*-- Specific to Our Inline Datepicker --*/
+
+.ui-datepicker {
+    font-weight: 300;
+    font-size: 1em;
+    background-color: #EBEFF2;
+    min-width: 300px;
+}
+
+.ui-datepicker-header {
+    font-size: 1.4em;
+    text-align: center;
+    position: relative;
+}
+
+.ui-datepicker-header .ui-datepicker-title {
+    padding: 1em 0;
+}
+
+.ui-datepicker-header a {
+    width: 24px;
+    height: 24px;
+    display: block;
+    left: 5%;
+    position: absolute;
+    background-image: url(../img/glyphsNew-01.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: -12px -27px;
+    cursor: pointer;
+    margin: 0.8em 0px;
+}
+
+.ui-datepicker-header a.ui-datepicker-next {
+    right: 5%;
+    left: inherit;
+    background-position: -12px -54px;
+}
+
+.ui-datepicker-header a span {
+    display: none;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+}
+
+.ui-datepicker-calendar td {
+    text-align: center;
+    padding: 0;
+}
+
+.ui-datepicker-calendar th {
+    text-align: center;
+    padding: 10px 0;
+    width: 14%;
+    color: #48484B;
+    text-transform: uppercase;
+}
+
+.ui-datepicker-calendar td a {
+    text-decoration: none;
+    color: #48484B;
+    display: block;
+    padding: 0.8em 0;
+}
+
+.ui-datepicker-calendar td span {
+    text-decoration: none;
+    color: #BECED7;
+    display: block;
+    padding: 0.8em 0;
+}
+
+.normal .ui-datepicker-calendar td a:hover {
+    background-color: #d3e0e7;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today a {
+    outline: 1px solid #BFCCD3;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-current-day a {
+    background-color: #d3e0e7;
+    color: #48484b;
+}
+
+.ui-datepicker-calendar tbody td {
+    border: 1px solid #D3E0E7;
+    width: 14%;
+}
+
+.ui-datepicker-calendar tbody td.ui-state-disabled {}
+
+.ui-datepicker-calendar tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/*-- Specific to Birthday Picker --*/
+
+.birthdayPicker .ui-datepicker-calendar {
+    border-bottom: 1px solid #D3E0E7;
+}
+
+.birthdayPicker .ui-datepicker-header a {
+    display: none;
+}
+
+.birthdayPicker .ui-datepicker-header {
+    padding: 0 0 1em 0;
+}
+
+.birthdayPicker .ui-datepicker-title select {
+    width: 50%;
+}
+
+.birthdayPicker .ui-datepicker-calendar thead {
+    display: none;
+}
+
+.dobPicker .ui-datepicker-inline {
+    border-bottom: 1px solid #D3E0E7;
+}
+
+a.ui-datepicker-prev,
+a.ui-datepicker-next {
+    display: none;
+}
+
+select.ui-datepicker-month,
+select.ui-datepicker-year {
+    font-size: 1em;
+}
+
+select.ui-datepicker-month {
+    margin-top: none !important;
+}
+
+.inlineLoader {
+    display: inline-block;
+    margin-left: 0.3em;
+}
+
+.loading {
+    width: 8px;
+    height: 8px;
+    background: #FFF;
+    border-radius: 4px;
+    float: left;
+    margin-right: 5px;
+}
+
+.loading-0 {
+    -webkit-animation: bounce 1s infinite;
+    -webkit-animation-delay: .1s;
+    background: #222222
+}
+
+.loading-1 {
+    -webkit-animation: bounce 1s infinite;
+    -webkit-animation-delay: .3s;
+    background: #222222
+}
+
+.loading-2 {
+    -webkit-animation: bounce 1s infinite ease;
+    -webkit-animation-delay: .5s;
+    background: #222222
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        opacity: 1;
+    }
+    60% {
+        opacity: .0;
+    }
+}
+
+
+/*.dobPicker{*/
+
+
+/*    margin: 0px 5px 7px;*/
+
+
+/*}*/
+
+
+/*-- New MiS DOB Selector--*/
+
+.misDob.open {
+    border: 0;
+}
+
+.misDob.open:before,
+.misDob.open:after {
+    display: none;
+}
+
+.misDob .dobWrapper {
+    display: none;
+    margin-top: -20px
+}
+
+.misDob.open .dobWrapper {
+    display: inherit;
+}
+
+select[value="empty"] {
+    color: #333;
+}
+
+
+/*********************FROM POPUP for invitre*****************/
+
+
+/*-- Specific to Attendee List Basic Styles--*/
+
+.attendeeList {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.attendeeList .attendee {
+    margin-top: 1px;
+    position: relative;
+    min-height: 70px;
+    background: #ebeff2;
+    /*overflow: hidden;*/
+    -webkit-transition: padding 0.5s ease-in-out;
+    -moz-transition: padding 0.5s ease-in-out;
+    -o-transition: padding 0.5s ease-in-out;
+    transition: padding 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.attendeeList .attendee.disabled {
+    background: #ebeff2;
+    color: #d3e0e7;
+}
+
+.attendeeList .attendee.disabled:hover {
+    background: #fff;
+    color: #ccc;
+}
+
+.attendeeList figure {
+    width: 70px;
+    height: 70px;
+    background: #d3e0e7;
+    text-align: center;
+    line-height: 70px;
+    font-size: 2em;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.attendeeList .attendee figure {
+    position: absolute;
+}
+
+.attendeeList .attendee .attendeeInfo {
+    float: left;
+    padding-left: 10px;
+    width: 100%;
+    padding-left: 90px;
+    padding-right: 8%;
+    min-height: 70px;
+}
+
+.attendeeList .attendee .attendeeInfo h2 {
+    padding-top: 16px;
+}
+
+.attendeeList .attendee .attendeeInfo h5 {
+    display: none;
+}
+
+.attendeeList .attendee .attendeeInfo .inputWrapper {
+    display: none;
+}
+
+.attendeeList .attendee .attendeeInfo input {
+    /*margin: 0;*/
+    /*font-size: 1.4em;*/
+    /*font-weight: 300;*/
+}
+
+.attendee.disabled h3 {
+    cursor: auto;
+}
+
+
+/*--When a name is edited--*/
+
+.attendeeList .attendee.edit .attendeeInfo h2 {
+    display: none;
+}
+
+.attendeeList .attendee .attendeeInfo h2 {
+    /*font-size: 1.4em;*/
+    /*font-weight: 300;*/
+    /*color: #48484b;*/
+}
+
+.attendeeList .attendee.edit .attendeeInfo {
+    padding-left: 80px;
+    padding-right: 1%;
+}
+
+.attendeeList .attendee.edit .attendeeInfo .inputWrapper {
+    display: block;
+}
+
+.banner {
+    text-align: center;
+    padding: 1em 5px;
+    background-color: #4085F4;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+}
+
+.smallOnly {
+    display: none;
+}
+
+.languages a{
+    margin-right: 1em;
+}
+
+
+footer{
+ position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+  text-align: center;
+}
+
+footer a{
+margin: 10px;
+color: #8497A0;
+font-size: 0.82em;
+}
+
+/*
+Grey #8497A0
+*/
+
+/*-- Media Queries --*/
+
+@media only screen and (min-width: 480px) {}
+
+@media only screen and (min-width: 768px) {
+    .hintBlock .content {
+    margin-top: -10%;
+}
+}
+
+@media only screen and (max-width: 1024px) {
+    .smallOnly {
+        display: inherit;
+    }
+}
+
+
+/*@media only screen and (min-width: 1140px)*/
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+    button {
+        min-width: 300px;
+    }
+    header {
+        background-color: #D3E0E7;
+        color: #48484B;
+    }
+    .transparent {
+        background-color: transparent;
+    }
+    .pill {
+        padding: 3px 7px;
+    }
+    .pill svg {
+        height: 15px;
+        width: 15px;
+    }
+    .wrapper {
+        width: 1004px;
+        /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    .container {
+        width: 1024px;
+        /* 1140px - 10% for margins */
+        margin: 0 auto;
+        padding: 0 10px;
+        padding-top: 10px;
+    }
+    .container.level2 .tabGroup.inner {
+        display: inherit;
+    }
+    .standard {
+        padding: 0 15px 0 1em;
+    }
+    .tabGroup.inner {
+        width: 130px;
+        position: absolute;
+    }
+    .tabGroup.inner .tab {
+        border-right: 1px solid #D3E0E7;
+        border-left: 1px solid #D3E0E7;
+        float: none;
+        height: 120px;
+        width: 120px;
+        padding: 37px 0 0;
+    }
+    .tabGroup.inner .tab svg {
+        margin: 0;
+    }
+    .tabGroup.inner .tab span {
+        display: block;
+        margin-top: 1em;
+    }
+    /*.tabGroup.inner .tab:first-child{
+border-radius: 3px 3px 0 0;
+border-top: 1px solid #D3E0E7;
+border-bottom: none;
+}
+.tabGroup.inner .tab:last-child{
+border-radius: 0 0 3px 3px;
+border-top: none;
+border-bottom: 1px solid #D3E0E7;
+}*/
+    .tabGroup.inner a:first-child .tab {
+        border-radius: 3px 3px 0 0;
+        border-top: 1px solid #D3E0E7;
+        border-bottom: none;
+    }
+    .tabGroup.inner a:last-child .tab {
+        border-radius: 0 0 3px 3px;
+        border-top: none;
+        border-bottom: 1px solid #D3E0E7;
+    }
+    .mainView {
+        margin-left: 150px;
+        padding-bottom: 20px;
+        background: #EBEFF2;
+        margin-top: 6px;
+    }
+    .mainView {
+        /*padding: 2px 5px 20px;*/
+        border: 1px solid #D3E0E7;
+        border-radius: 3px;
+        background: #FAFAFA;
+    }
+    .mainView.transparent {
+        background-color: transparent;
+    }
+    .mainView.clear {
+        background-color: transparent;
+        border:none;
+    }
+    .container.full .mainView {
+        margin-left: 0;
+        background-color: transparent;
+    }
+    .mainView.centered {
+        margin-left: 0;
+        background-color: transparent;
+    }
+    .infoBar {
+        height: 65px;
+    }
+    .infoBar figure {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+    }
+    .infoBar .left {
+        display: none;
+    }
+    .level2 .infoBar .left {
+        display: inherit;
+        height: 65px;
+    }
+    .level2 .infoBar .backLink {
+        height: 65px;
+        padding: 20px 0 0 10px;
+    }
+    .level2 .infoBar .left {
+        display: inherit;
+        height: 65px;
+    }
+    .level2 .infoBar .middle {
+        text-align: center;
+        padding-left: 0
+    }
+    .level2 .infoBar .right {
+        left: inherit;
+    }
+    .infoBar .middle {
+        text-align: left;
+        padding-left: 120px;
+        padding-top: 6px;
+    }
+    .infoBar .right {
+        left: 32px;
+    }
+    .infoBar.plain .right {
+        display: none;
+    }
+    .infoBar.plain .middle {
+        padding-left: 20px;
+    }
+    .mvTab {
+        /*background-color: #EBEFF2; */
+        border-bottom: 1px solid #D3E0E7;
+        margin-top: 0;
+        border-radius: 3px 3px 0 0;
+        padding-bottom: 5px;
+    }
+    .mvTab .backLink {
+        position: absolute;
+        padding: 11px 12px;
+        color: #8497A0;
+    }
+    #menu {
+        margin: 0;
+        position: absolute;
+        width: 275px;
+        right: 0;
+        background: none;
+        z-index: 2;
+    }
+    #menu .tab {
+        background: none;
+		line-height:10px;
+        color: #48484B;
+        height: 65px;
+        padding: 11px 0 0;
+    }
+    #menu .tab span {
+        display: block;
+    }
+    .tabGroup.inner .tab svg {
+        width: 30px;
+        height: auto;
+    }
+    /*--SVG States--*/
+    svg.groups path,
+    svg.groups circle {
+        stroke: #48484B;
+    }
+    .active svg.groups path,
+    .active svg.groups circle {
+        fill: #48484B;
+    }
+    svg.flag polyline {
+        stroke: #48484B;
+    }
+    svg.profile path,
+    svg.profile circle {
+        stroke: #48484B;
+    }
+    .active svg.profile path,
+    .active svg.profile circle {
+        fill: #48484B;
+    }
+    .active svg.flag polyline {
+        fill: #48484B;
+    }
+    .list .row {
+        height: 130px;
+        padding: 0px 0 0 0px;
+        margin-top: 3px;
+    }
+    .list .row .info {
+        padding-left: 215px;
+        padding-top: 10px;
+        margin-right: 15%;
+    }
+    .list .row figure {
+        width: 200px;
+        height: 130px;
+        border-radius: 0;
+    }
+    .list .row h2 {
+        min-height: 62px;
+        max-height: 104px;
+    }
+    input[type=checkbox] + label {
+        width: 170px;
+        /* margin-top: 50px; */
+    }
+    input.toggle + label {
+        width: 37px;
+        margin: 0;
+    }
+    .list .row .right {
+        width: 15%;
+        padding: 23px 2px 0;
+    }
+    /*-- Activity Details --*/
+    .activityInfo {
+        display: none;
+    }
+    .activityDetails {
+        padding: 1em;
+        border-top: 1px solid #FFFFFF;
+    }
+    .activityDetails figure {
+        height: 250px;
+        width: 49%;
+        float: left;
+        display: inherit !important;
+        float: right;
+        margin: 0 0 15px 15px;
+    }
+    .activityDetails .simpleDetails {
+        position: inherit;
+        top: inherit;
+        display: inherit !important;
+        padding: 0;
+        background: inherit;
+        height: inherit;
+        min-height: inherit;
+        float: left;
+        width: 49%;
+    }
+    .activityDetails .simpleDetails h2 {
+        display: inherit;
+    }
+    .activityDetails .simpleDetails .date {
+        display: block;
+        padding: 15px 0 10px;
+    }
+    .activityDetails .simpleDetails .date svg {
+        height: 25px;
+    }
+    .activityDetails .simpleDetails .price {
+        position: inherit;
+        padding: 15px 0 10px;
+    }
+    .activityDetails .block {
+        display: inherit;
+    }
+    .extras {
+        clear: both;
+        padding-left: 1em;
+        padding-top: 1.5em;
+    }
+    .extras.read {
+        padding-left: 0;
+    }
+    .extras .extra {
+        border: 1px solid #D3E0E7;
+        margin: 5px 3% 10px 0;
+        display: inline-block;
+        width: 46%;
+        vertical-align: top;
+    }
+    .extras .title {
+        display: inherit;
+    }
+    .activityDetails .details {
+        /* width: 48%; */
+        padding: 0;
+    }
+    /*-- Folks Table --*/
+    .folksTable .miniHeader {
+        padding-top: 10px
+    }
+    .folksTable .miniHeader .name {
+        padding-left: 55px;
+    }
+    .folksTable .row {
+        min-height: 43px;
+    }
+    .folksTable .row figure {
+        width: 43px;
+        height: 43px;
+    }
+    .folksTable .row h2 {
+        padding: 12px 4em 0 55px;
+    }
+    .folksTable .status svg {
+        height: 20px;
+        margin: 2px 0 1px;
+    }
+    .fields:before,
+    .fields:after {
+        content: " ";
+        display: table;
+    }
+    .fields .inputWrapper,
+    .fields .fieldRow-2 {
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 48%;
+    }
+    .fields .fieldRow-2 .inputWrapper {
+        float: left;
+        width: 49%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .fields .fieldRow-2 .inputWrapper:nth-child(2) {
+        margin-left: 2%;
+    }
+    .fields .fieldRow-3 .inputWrapper {
+        float: left;
+        width: 32%;
+    }
+    .fields .fieldRow-3 .inputWrapper:last-child,
+    .fields .fieldRow-3 .inputWrapper:nth-child(2) {
+        margin-left: 2%;
+    }
+    .fields h2,
+    .fields p {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .fields.summary h2,
+    .fields.summary p {
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+    .profileHead .infoBar {
+        display: none;
+    }
+    .userBasic figure {
+        margin: 1em 1em 2em;
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        float: left;
+        cursor: pointer;
+    }
+    .userBasic figure:hover {
+        border-color: #D3E0E7;
+    }
+    .profileHead .userBasic {
+        /* float: left; */
+        /* width: 70%; */
+    }
+    .profileHead .userBasic .fields {
+        width: 723px;
+        margin-top: 52px;
+        margin-left: 90px;
+        float: left;
+    }
+    .profileHead .fields.credit {
+        float: left;
+        width: 30%;
+        min-height: 270px;
+    }
+    .control {
+        width: 50%;
+        float: left;
+    }
+    .control {
+        position: relative;
+        padding: 15px 20px 0 1em;
+        background-color: #EBEFF2;
+        height: 45px;
+    }
+    .control .right {
+        padding: 10px 20px 10px 0;
+    }
+    .wideOnly {
+        display: inherit;
+    }
+    .mobileOnly {
+        display: none;
+    }
+    .savedCard .pill {
+        margin-left: 1%;
+    }
+    .container.paying .tabGroup {
+        display: inherit;
+    }
+    .container.paying .payBlock .backLink {
+        display: inherit;
+    }
+    /*-- Activity Head --*/
+    .activityHead .upper .inner {
+        height: 70px;
+    }
+    .activityHead .upper .title {
+        position: relative;
+        padding-left: 100px;
+    }
+    .activityHead .upper .title .backLink {
+        position: absolute;
+        left: 0;
+        text-align: center;
+        padding: 12px 0;
+        width: 80px;
+        background-color: #EBEFF2;
+        color: #8497A0;
+    }
+    .activityHead .upper .title .backLink svg {
+        width: 12px;
+    }
+    .activityHead .upper .title .backLink span {
+        display: block;
+        margin-top: 5px;
+    }
+    .activityHead .lower {
+        padding: 10px 0;
+    }
+    .activityHead.joined .upper .title .backLink svg polyline {}
+    .activityHead.joined .upper .inner {
+        height: 70px;
+        /*Weird fix*/
+    }
+    .breathing {
+        color: #8497A0;
+        margin-top: 2px;
+    }
+    .tile {
+        padding: 2em 1.5em 1.5em;
+    }
+    .inviteBlock .folksTable {
+        margin: 2em 0 0;
+    }
+    section.loginreg .fields .inputWrapper {
+        float: none;
+        width: inherit;
+    }
+    .inputWrapper select {
+        margin: 16px 0 1px 2px;
+        width: 98%;
+    }
+    section.loginreg .fields {
+        padding: 20px 20px 30px;
+    }
+    .holdingPage p {
+        max-width: 360px;
+    }
+    .miniStatus svg {
+        width: 16px;
+        height: 16px;
+    }
+    .status .rightButton svg {
+        width: 18px;
+        height: 18px;
+    }
+    .rightButton svg {
+        width: 24px;
+        height: 24px;
+    }
+    .activityHead.joined .upper .statuses {
+        width: 15%;
+        left: 70%;
+    }
+    .activityHead .upper .pay {
+        position: absolute;
+        width: 15%;
+        right: 0;
+        height: 100%;
+        background-color: #EBEFF2;
+        -webkit-transition: all 0.5s ease;
+        text-align: center;
+    }
+    .activityHead .upper .pay button {
+        width: 100%;
+    }
+    .activityHead .upper .pay button svg {
+        margin-bottom: 6px;
+    }
+    .activityHead .pay {
+        display: none;
+    }
+    .activityHead.joined .pay {
+        display: inherit;
+    }
+    .activityHead.joined.changing .statuses {
+        left: 0;
+        width: 33.333%;
+    }
+    .standardMob {
+        padding: 0;
+    }
+    .activityHead.joined .pay2 {
+        display: none;
+    }
+    .banner {
+        border-radius: 3px 3px 0 0;
+        position: inherit;
+        bottom: inherit;
+        left: inherit;
+    }
+    .list .row .date {
+        top: inherit;
+        bottom: 0.7em;
+    }
+}
+
+
+/*-- Print styles --*/
+
+@media print {
+    *, *:before, *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.infoBar  + .infoBar{
+	border-top : 5px solid white;
+}
+
+.categories{
+	height: 45px;
+}
+
+.categories-text {
+	margin-top:	5px !important;
+	float:left;
+}
+
+.options-categories{
+	margin-top : 0px;
+	float: left;
+}
+
+.options-first{
+margin-left : 202px;
+}
+
+.event-card{
+	width:220px;
+	height:215px !important;
+	float:left;
+}
