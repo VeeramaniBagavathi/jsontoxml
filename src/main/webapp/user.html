@@ -119,36 +119,56 @@
                   <!-- ngRepeat: group in groups| orderBy:myTime -->
          <a href="#">
          <div class="row">
-         <figure style="background-image:url(/minions/resources/images/TopRamen_Beef.gif)" ></figure>
+         <figure style="background-image:url(/minions/resources/images/familyEvent.jpg)" ></figure>
          <section class="info">
          <h2 style="white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis; padding-right:20px" class="ng-binding">GA Ticket - Festival (Event - general allocation) Group </h2>
          <h2 style="float:right; margin-top:-10px" class="smallOnly">
        
          </h2>
          <p class="small" >
-         <span translate="WITH" class="">With</span>:
-         <!-- ngRepeat: p in group.us |  limitTo : 3 --><span ng-repeat="p in group.us |  limitTo : 3 " class="ng-binding ">Sathiesh dhas</span><!-- end ngRepeat: p in group.us |  limitTo : 3 -->
-         <!-- ngIf: len > 3 -->
+         <span translate="WITH" class="">With : Sathiesh Dhas</span>
+        
          </p>
          </section>
          <div class="timeStamp"><span translate="L_ACTIVE" class="">Last active</span>: <span am-time-ago="(group.sd || group.cd)">17 minutes ago</span></div>
          </div>
          </a>
+         
+         <a href="#">
+         <div class="row">
+         <figure style="background-image:url(/minions/resources/images/SICILY.jpg)" ></figure>
+         <section class="info">
+         <h2 style="white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis; padding-right:20px" class="ng-binding">Sicily Trip - Travel (Event - general allocation) Group </h2>
+         <h2 style="float:right; margin-top:-10px" class="smallOnly">
+       
+         </h2>
+         <p class="small" >
+         <span translate="WITH" class="">With : Mithilesh Ravindran</span>
+        
+         </p>
+         </section>
+         <div class="timeStamp"><span translate="L_ACTIVE" class="">Last active</span>: <span am-time-ago="(group.sd || group.cd)">12 minutes ago</span></div>
+         </div>
+         </a>
+         
+         
          </div>	
          </div>
          
          <div class="container expandedCardContainer" align="center" ng-show="expandedCard" >
           <div class="card expandedcard-dimension">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" ng-src="/minions/resources/images/{{hash}}">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Thack Hamburg<i class="material-icons right">more_vert</i></span>
       <p><a href="#">This is a link</a></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Thack Hamburg<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4">{{mainTitle}}<i class="material-icons right">close</i></span>
+      <p>Get your hands dirty with datasets and APIs provided by the partners, 
+choose the track that inspires you the most and get creative! 
+One goal to keep in mind: make life easier..</p>
        
        <div class="row cards-element">
         <div class="col s12 ">
@@ -168,7 +188,7 @@
             </div>
             <div class="card-action">
                <p class="options-categories">
-      <input type="checkbox" class="filled-in" id="confirm-flight" checked="checked" />
+      <input type="checkbox" class="filled-in" id="confirm-flight" checked="checked"  disabled/>
       <label for="confirm-flight">Confirm Flight</label>
 			</p>
              
@@ -198,7 +218,7 @@
             <div class="card-action">
                <p class="options-categories">
                 
-      <input type="checkbox" class="filled-in" id="hotel-stay" checked="checked" ng-model="option.stay"/>
+      <input type="checkbox" class="filled-in" id="hotel-stay" checked="checked" ng-model="option.hotel" ng-click=togglePrice() />
       <label for="hotel-stay">Confirm Hotel</label>
 			</p>
              
@@ -213,11 +233,11 @@
         <div style="width:500px;">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-            <div ng-hide={{!option.stay}} ng-show="{{option.stay}}">
+            <!-- <div ng-hide={{!option.stay}} ng-show="{{option.stay}}">
             <span class="card-title">Total Price : {{flights[1].price--hotels.hotels[1].amount}} EUR</span>
-            </div>
-			    <div ng-hide={{option.stay}} ng-show="{{!option.stay}}">
-			   <span class="card-title">Total Price : {{flights[1].price}} EUR</span>
+            </div> -->
+			    <div>
+			   <span class="card-title">Total Price : {{totalPrice}} EUR</span>
 			   </div>
             </div>
           </div>
@@ -241,7 +261,7 @@
 	  
 	   <div class="card small event-card" ng-show="category.sports">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/cricket.png">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sports : Cricket @ Chennai<i class="material-icons right">more_vert</i></span>
@@ -250,13 +270,13 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this produked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('cricket.png')>More</a>
     </div>
   </div>
   
   <div class="card small event-card" ng-show="category.technology">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/dhackimg.gif">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Tech : Dutch Hack<i class="material-icons right">more_vert</i></span>
@@ -265,13 +285,13 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this productked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('dhackimg.gif')>More</a>
     </div>
   </div>
   
   <div class="card small event-card" ng-show="category.sports">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/hockey.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sports : Hockey @ Hamburg<i class="material-icons right">more_vert</i></span>
@@ -280,13 +300,13 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product tha on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('hockey.jpg')>More</a>
     </div>
   </div>
   
   <div class="card small event-card" ng-show="category.adventure">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/adventure.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Adventure : Mountain Climb..<i class="material-icons right">more_vert</i></span>
@@ -295,14 +315,14 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product tce clicked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('adventure.jpg')>More</a>
     </div>
   </div>
   
   
   <div class="card small event-card" ng-show="category.technology">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/tnooz.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Tech : THack Hamburg<i class="material-icons right">more_vert</i></span>
@@ -311,7 +331,7 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product t clicked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('tnooz.jpg')>More</a>
     </div>
   </div>
   
@@ -321,7 +341,7 @@
   <div class="card small event-card" ng-show="category.sports">
   
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/TopRamen_Beef.gif">
+      <img class="activator" src="/minions/resources/images/Tennis.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sports : Tennis @ Ams<i class="material-icons right">more_vert</i></span>
@@ -330,7 +350,7 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
       <p>Here is some more information about this p once clicked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView()>More</a>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('Tennis.jpg')>More</a>
     </div>
   </div>
   

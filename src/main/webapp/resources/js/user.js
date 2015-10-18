@@ -14,7 +14,7 @@
 	 $scope.travelStayPrice = 0;
 	 $scope.travelPrice = 0;
 	 $scope.stayPrice = 0;
-	
+	 $scope.option.hotel = true;
 
     $scope.loadServices = function() {
         var httpRequest = $http({
@@ -25,24 +25,42 @@
         }).success(function(data, status) {
             $scope.flights = data;
             $scope.travelPrice = data[1].price;
+            
+            var httpRequestHotels = $http({
+                method: 'GET',
+                url: 'web/hotels',
+                data: mockDataForHotels
+
+            }).success(function(data, status) {
+                $scope.hotels = data;
+                $scope.hotelprice = $scope.hotels.hotels[1].amount|0;
+                $scope.totalPrice = parseInt($scope.hotels.hotels[1].amount) + parseInt($scope.flights[1].price);
+            });
         });
         
-        var httpRequestHotels = $http({
-            method: 'GET',
-            url: 'web/hotels',
-            data: mockDataForHotels
-
-        }).success(function(data, status) {
-            $scope.hotels = data;
-        });
+       
         
        
       
 
     };
+    
+  
+    
+    $scope.togglePrice = function() {
+    	if($scope.option.hotel){
+    		$scope.totalPrice =   parseInt($scope.hotels.hotels[1].amount) + parseInt($scope.flights[1].price);
+    	}
+    	else {
+    		$scope.totalPrice =  parseInt($scope.flights[1].price);
+    	}
+    	/*$scope.totalPrice= $scope.flights[1].price|0;*/
+    }
+  
 
     
-    $scope.expandedCardView = function() {
+    $scope.expandedCardView = function(img) {
+       $scope.hash=img;
  	   $scope.expandedCard = true; 
     };
     
