@@ -32,8 +32,8 @@ public class AirShoppingResonseMapper {
 			connection.setFlightNumber("9A " + flightSegmentType.getOperatingCarrier().getFlightNumber().getValue());
 			connection.setDepartureStation(dataLists.getOriginDestinationList().get(0).getDepartureCode().getValue());
 			connection.setArrivalStation((dataLists.getOriginDestinationList().get(0).getArrivalCode().getValue()));
-			connection.setDepartureDateTime(toDate(flightSegmentType.getDeparture().getDate()) + " " + flightSegmentType.getDeparture().getTime());
-			connection.setArrivalDateTime((toDate(flightSegmentType.getArrival().getDate()) + " " + flightSegmentType.getArrival().getTime()));
+			connection.setDepartureDateTime(toDate(flightSegmentType.getDeparture().getDate()) + " " + flightSegmentType.getDeparture().getTimeAttribute());
+			connection.setArrivalDateTime((toDate(flightSegmentType.getArrival().getDate()) + " " + flightSegmentType.getArrival().getTimeAttribute()));
 			connection.setPrice(response.getOffersGroup().getAirlineOffers().get(count).getAirlineOffer().get(0).getPricedOffer().getOfferPrice().get(0).getRequestedDate().getPriceDetail().getBaseAmount().getValue().toString());
 			connection.setCurrency("EUR");
 			flightConnections.add(connection);
