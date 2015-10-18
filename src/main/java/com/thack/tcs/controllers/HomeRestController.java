@@ -38,7 +38,7 @@ public class HomeRestController {
     @RequestMapping(value = "/flight/itinerary", method = RequestMethod.GET)
     public List<FlightConnection> getFlightDetails() throws JAXBException, ClientProtocolException, ClientException, IOException {
     	 ClassLoader classLoader = getClass().getClassLoader(); 
-    	 File file = new File(classLoader.getResource("AirShopping.xml").getFile());
+    	 File file = new File("C://AirShopping.xml");
  		JAXBContext jaxbContext = JAXBContext.newInstance(AirShoppingRQ.class);
  		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
  		AirShoppingRQ request = (AirShoppingRQ) jaxbUnmarshaller.unmarshal(file);

@@ -20,7 +20,7 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/minions/resources/js/materialize.min.js"></script>
     <form  ng-controller="MISController">
-      <div class="entire"  ng-init="loadPeople()">
+      <div class="entire"  ng-init="loadServices()">
          <header class="">
            
                <div class="wrapper">
@@ -149,38 +149,22 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Thack Hamburg<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      
-      
-      <div class="row cards-element">
-        <div class="col s12">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Your Stay</span>
-              <p>Your stay is at hotel - Gustav Geinsham.
-             </p>
-            </div>
-            <div class="card-action">
-               <p class="options-categories">
-      <input type="checkbox" class="filled-in" id="hotel-stay" checked="checked" />
-      <label for="hotel-stay">Confirm Hotel</label>
-			</p>
-             
-            </div>
-            
-            
-          </div>
-        </div>
-      </div>
-      
-      
-            
-            <div class="row cards-element">
+       
+       <div class="row cards-element">
         <div class="col s12 ">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Your Travel Journey</span>
-              <p>Your travel is by - Gustav Geinsham.
-             </p>
+               <p>
+				Your travel from : <font size="3" color="blue">{{flights[1].departureStation}}</font> to <font size="3" color="blue">{{flights[1].arrivalStation}}</font>
+			</p>
+			<p>
+				Your flight : {{flights[1].name}}
+			</p>
+			<p>
+				Pay : <font size="3" color="red">{{flights[1].price}}
+					{{flights[1].currency}}</font>
+			</p>
             </div>
             <div class="card-action">
                <p class="options-categories">
@@ -191,6 +175,51 @@
             </div>
             
             
+          </div>
+        </div>
+      </div>
+      
+      <div class="row cards-element">
+        <div class="col s12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Your Stay</span>
+              <p>
+				Your room @ <font size="3" color="blue">{{hotels.hotels[1].name}}</font>
+			</p>
+			<p>
+				Rating : <font size="3" color="blue"></font>
+			</p>
+			<p>
+				Pay : <font size="3" color="red">{{hotels.hotels[1].amount}}
+					{{hotels.hotels[1].currency}}</font>
+			</p>
+            </div>
+            <div class="card-action">
+               <p class="options-categories">
+                
+      <input type="checkbox" class="filled-in" id="hotel-stay" checked="checked" ng-model="option.stay"/>
+      <label for="hotel-stay">Confirm Hotel</label>
+			</p>
+             
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+       <div class="row cards-element">
+        <div style="width:500px;">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+            <div ng-hide={{!option.stay}} ng-show="{{option.stay}}">
+            <span class="card-title">Total Price : {{flights[1].price--hotels.hotels[1].amount}} EUR</span>
+            </div>
+			    <div ng-hide={{option.stay}} ng-show="{{!option.stay}}">
+			   <span class="card-title">Total Price : {{flights[1].price}} EUR</span>
+			   </div>
+            </div>
           </div>
         </div>
       </div>

@@ -5,10 +5,18 @@
        adventure : true,
 	   technology : true
      };
+      $scope.option = {
+    	       stay : true
+    	     };
 	 
 	 $scope.flights = [];
+	 $scope.hotels = [];
+	 $scope.travelStayPrice = 0;
+	 $scope.travelPrice = 0;
+	 $scope.stayPrice = 0;
+	
 
-    $scope.loadFlights = function() {
+    $scope.loadServices = function() {
         var httpRequest = $http({
             method: 'GET',
             url: 'web/flight/itinerary',
@@ -16,14 +24,10 @@
 
         }).success(function(data, status) {
             $scope.flights = data;
+            $scope.travelPrice = data[1].price;
         });
-
-    };
-    
-    $scope.hotels = [];
-
-    $scope.loadHotels = function() {
-        var httpRequest = $http({
+        
+        var httpRequestHotels = $http({
             method: 'GET',
             url: 'web/hotels',
             data: mockDataForHotels
@@ -31,8 +35,12 @@
         }).success(function(data, status) {
             $scope.hotels = data;
         });
+        
+       
+      
 
     };
+
     
     $scope.expandedCardView = function() {
  	   $scope.expandedCard = true; 
