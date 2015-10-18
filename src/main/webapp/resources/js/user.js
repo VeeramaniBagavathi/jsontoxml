@@ -33,6 +33,16 @@
         });
 
     };
+    
+    $scope.expandedCardView = function() {
+ 	   $scope.expandedCard = true; 
+    };
+    
+    $scope.expandedCardViewClose = function() {
+  	   $scope.expandedCard = false; 
+     };
+  
+    
     }]);
 	var mockDataForFlights = "json=" + encodeURI(JSON.stringify([]));
 	var mockDataForHotels = "json=" + encodeURI(JSON.stringify([]));
