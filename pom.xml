@@ -100,11 +100,12 @@
                     <exclude>**/*</exclude>
                 </excludes>
             </resource>
-        </resources>
-		<resource>
+			<resource>
                 <directory>${basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
          </resource>
+        </resources>
+		
         <plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

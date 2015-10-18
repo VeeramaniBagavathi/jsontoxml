@@ -162,17 +162,15 @@
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Thack Hamburg<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+    
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{{mainTitle}}<i class="material-icons right">close</i></span>
-      <p>Get your hands dirty with datasets and APIs provided by the partners, 
-choose the track that inspires you the most and get creative! 
-One goal to keep in mind: make life easier..</p>
-       
+      <p>Presented in conjunction with the International Air Transport Association, THack Hamburg will offer access to IATA's NDC-compliant APIs for airline shopping and related travel services.</p>
+     
        <div class="row cards-element">
-        <div class="col s12 ">
-          <div class="card blue-grey darken-1">
+        <div class="col s12 " style="width: 327px;">
+          <div class="card card-element-color">
             <div class="card-content white-text">
               <span class="card-title">Your Travel Journey</span>
                <p>
@@ -183,13 +181,13 @@ One goal to keep in mind: make life easier..</p>
 			</p>
 			<p>
 				Pay : <font size="3" color="red">{{flights[1].price}}
-					{{flights[1].currency}}</font>
+					EUR</font>
 			</p>
             </div>
-            <div class="card-action">
+            <div class="card-action" style="border-top: 1px solid white">
                <p class="options-categories">
       <input type="checkbox" class="filled-in" id="confirm-flight" checked="checked"  disabled/>
-      <label for="confirm-flight">Confirm Flight</label>
+      <label for="confirm-flight" style="color: white; font-size: 17px;">Confirm Flight</label>
 			</p>
              
             </div>
@@ -200,26 +198,26 @@ One goal to keep in mind: make life easier..</p>
       </div>
       
       <div class="row cards-element">
-        <div class="col s12">
-          <div class="card blue-grey darken-1">
+        <div class="col s12" style="width: 327px">
+          <div class="card card-element-color">
             <div class="card-content white-text">
               <span class="card-title">Your Stay</span>
               <p>
 				Your room @ <font size="3" color="blue">{{hotels.hotels[1].name}}</font>
 			</p>
 			<p>
-				Rating : <font size="3" color="blue"></font>
+				Rating : <font size="3" color="blue">{{hotels.hotels[1].rating}}</font>
 			</p>
 			<p>
 				Pay : <font size="3" color="red">{{hotels.hotels[1].amount}}
-					{{hotels.hotels[1].currency}}</font>
+					EUR</font>
 			</p>
             </div>
-            <div class="card-action">
+            <div class="card-action" style="border-top: 1px solid white">
                <p class="options-categories">
                 
       <input type="checkbox" class="filled-in" id="hotel-stay" checked="checked" ng-model="option.hotel" ng-click=togglePrice() />
-      <label for="hotel-stay">Confirm Hotel</label>
+      <label for="hotel-stay" style="color: white; font-size: 17px;">Confirm Hotel</label>
 			</p>
              
             </div>
@@ -230,8 +228,8 @@ One goal to keep in mind: make life easier..</p>
       </div>
       
        <div class="row cards-element">
-        <div style="width:500px;">
-          <div class="card blue-grey darken-1">
+        <div style="width:620px;">
+          <div class="card card-element-color">
             <div class="card-content white-text">
             <!-- <div ng-hide={{!option.stay}} ng-show="{{option.stay}}">
             <span class="card-title">Total Price : {{flights[1].price--hotels.hotels[1].amount}} EUR</span>
@@ -257,20 +255,20 @@ One goal to keep in mind: make life easier..</p>
 		
       </div>
 	  
-	  <footer ng-hide="expandedCard">
+	  <footer align="center" ng-hide="expandedCard">
 	  
 	   <div class="card small event-card" ng-show="category.sports">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/cricket.png">
+      <img class="activator" src="/minions/resources/images/football.jpg">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Sports : Cricket @ Chennai<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4">Sports : Football @ Amsterdam<i class="material-icons right">more_vert</i></span>
+      
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this produked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView('cricket.png')>More</a>
+      <span class="card-title grey-text text-darken-4">Football Match<i class="material-icons right">close</i></span>
+      <p>Club Match between Manchester United and Chelsea.</p>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('football.jpg')>More</a>
     </div>
   </div>
   
@@ -280,10 +278,10 @@ One goal to keep in mind: make life easier..</p>
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Tech : Dutch Hack<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Dutch Hack<i class="material-icons right">close</i></span>
       <p>Here is some more information about this productked on.</p>
       <a class="waves-effect waves-light btn" ng-click=expandedCardView('dhackimg.gif')>More</a>
     </div>
@@ -295,10 +293,10 @@ One goal to keep in mind: make life easier..</p>
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sports : Hockey @ Hamburg<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Hockey Match<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product tha on.</p>
       <a class="waves-effect waves-light btn" ng-click=expandedCardView('hockey.jpg')>More</a>
     </div>
@@ -306,16 +304,16 @@ One goal to keep in mind: make life easier..</p>
   
   <div class="card small event-card" ng-show="category.adventure">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/minions/resources/images/adventure.jpg">
+      <img class="activator" src="/minions/resources/images/sicily_img.jpg">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Adventure : Mountain Climb..<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4">Adventure: Sicily<i class="material-icons right">more_vert</i></span>
+     
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product tce clicked on.</p>
-      <a class="waves-effect waves-light btn" ng-click=expandedCardView('adventure.jpg')>More</a>
+      <span class="card-title grey-text text-darken-4">Trip<i class="material-icons right">close</i></span>
+      <p>Vacation at the beautiful city on Sicily.</p>
+      <a class="waves-effect waves-light btn" ng-click=expandedCardView('sicily_img.jpg')>More</a>
     </div>
   </div>
   
@@ -326,10 +324,10 @@ One goal to keep in mind: make life easier..</p>
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Tech : THack Hamburg<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Thack Hamburg<i class="material-icons right">close</i></span>
       <p>Here is some more information about this product t clicked on.</p>
       <a class="waves-effect waves-light btn" ng-click=expandedCardView('tnooz.jpg')>More</a>
     </div>
@@ -345,10 +343,10 @@ One goal to keep in mind: make life easier..</p>
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sports : Tennis @ Ams<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+     
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <span class="card-title grey-text text-darken-4">Tennis Match<i class="material-icons right">close</i></span>
       <p>Here is some more information about this p once clicked on.</p>
       <a class="waves-effect waves-light btn" ng-click=expandedCardView('Tennis.jpg')>More</a>
     </div>

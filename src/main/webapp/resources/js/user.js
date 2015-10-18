@@ -28,7 +28,7 @@
             
             var httpRequestHotels = $http({
                 method: 'GET',
-                url: 'web/hotels',
+                url: 'web/hotels?lat=51.4700256&longi=-0.4564842',
                 data: mockDataForHotels
 
             }).success(function(data, status) {

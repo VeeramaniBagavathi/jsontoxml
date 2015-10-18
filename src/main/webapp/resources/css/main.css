@@ -2813,6 +2813,7 @@ border-bottom: 1px solid #D3E0E7;
 	}
 	input[type=checkbox]+label {
 		width: 170px;
+		color: white;
 		/* margin-top: 50px; */
 	}
 	input.toggle+label {
@@ -3163,6 +3164,7 @@ border-bottom: 1px solid #D3E0E7;
 }
 
 .infoBar+.infoBar {
+	background-color : orange;
 	border-top: 5px solid white;
 }
 
@@ -3173,6 +3175,7 @@ border-bottom: 1px solid #D3E0E7;
 .categories-text {
 	margin-top: 5px !important;
 	float: left;
+	color: white;
 }
 
 .options-categories {
@@ -3217,4 +3220,8 @@ border-bottom: 1px solid #D3E0E7;
     left: 25px;
     right:25px;
     bottom: 25px;
+}
+
+.card-element-color{
+	background-color: #5CB180;
 }
