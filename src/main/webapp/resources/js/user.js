@@ -8,18 +8,31 @@
 	 
 	 $scope.flights = [];
 
-    $scope.loadPeople = function() {
+    $scope.loadFlights = function() {
         var httpRequest = $http({
             method: 'GET',
             url: 'web/flight/itinerary',
-            data: mockDataForThisTest
+            data: mockDataForFlights
 
         }).success(function(data, status) {
             $scope.flights = data;
         });
 
     };
+    
+    $scope.hotels = [];
+
+    $scope.loadHotels = function() {
+        var httpRequest = $http({
+            method: 'GET',
+            url: 'web/hotels',
+            data: mockDataForHotels
+
+        }).success(function(data, status) {
+            $scope.hotels = data;
+        });
+
+    };
     }]);
-	var mockDataForThisTest = "json=" + encodeURI(JSON.stringify([
-   
-]));
+	var mockDataForFlights = "json=" + encodeURI(JSON.stringify([]));
+	var mockDataForHotels = "json=" + encodeURI(JSON.stringify([]));
