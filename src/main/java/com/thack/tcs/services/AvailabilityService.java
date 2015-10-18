@@ -110,6 +110,7 @@ public class AvailabilityService {
             hotel.setName(bookableHotel.getName());
             hotel.setCurrency(bookableHotel.getCurrency());
             hotel.setRateKey(bookableHotel.getRooms().get(0).getRates().get(0).getRateKey());
+            hotel.setRating(bookableHotel.getCategoryName());
             hotels.add(hotel);
         }
         hotelBookings.setHotels(hotels);
