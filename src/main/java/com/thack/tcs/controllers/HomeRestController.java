@@ -37,7 +37,8 @@ public class HomeRestController {
     
     @RequestMapping(value = "/flight/itinerary", method = RequestMethod.GET)
     public List<FlightConnection> getFlightDetails() throws JAXBException, ClientProtocolException, ClientException, IOException {
- 	   File file = new File("C:\\AirShopping.xml");
+    	 ClassLoader classLoader = getClass().getClassLoader(); 
+    	 File file = new File(classLoader.getResource("AirShopping.xml").getFile());
  		JAXBContext jaxbContext = JAXBContext.newInstance(AirShoppingRQ.class);
  		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
  		AirShoppingRQ request = (AirShoppingRQ) jaxbUnmarshaller.unmarshal(file);
@@ -47,7 +48,8 @@ public class HomeRestController {
     
     @RequestMapping(value = "/flight/book", method = RequestMethod.GET)
     public String bookFlight() throws JAXBException, ClientProtocolException, ClientException, IOException {
- 	   File file = new File("C:\\OrderCreate.xml");
+    	ClassLoader classLoader = getClass().getClassLoader(); 
+   	 	File file = new File(classLoader.getResource("OrderCreate.xml").getFile());
  		JAXBContext jaxbContext = JAXBContext.newInstance(OrderCreateRQ.class);
  		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
  		OrderCreateRQ request = (OrderCreateRQ) jaxbUnmarshaller.unmarshal(file);

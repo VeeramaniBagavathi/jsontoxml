@@ -54,16 +54,24 @@ public class AvailabilityService {
         StatusRS statusRS = apiClient.status();
         System.out.println(statusRS);
 
-        AvailRoomBuilder availRoom = AvailRoom.builder().adults(Integer.parseInt(numberOfAdults));
+        AvailRoomBuilder availRoom = AvailRoom.builder().adults(Integer.parseInt(numberOfAdults)).children(numberOfChildren != null ? Integer.parseInt(numberOfChildren) : null);
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate checkIn = LocalDate.parse(checkinDate, formatter);
-        LocalDate checkOut = LocalDate.parse(checkoutDate, formatter);
+        LocalDate checkIn = null;
+        LocalDate checkOut = null;
+        if (checkinDate != null && checkoutDate != null) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            checkIn = LocalDate.parse(checkinDate, formatter);
+            checkOut = LocalDate.parse(checkoutDate, formatter);
+        }
+        else {
+            checkIn = LocalDate.now().plusDays(100);
+            checkOut = LocalDate.now().plusDays(100 + 1);
+        }
 
         // Availability availability = Availability.builder().checkIn(checkIn).checkOut(checkOut)./* destination("DEU"). */addRoom(availRoom).limitHotelsTo(2).ratesHigherThan(new BigDecimal(50))
         // .ratesLowerThan(new BigDecimal(350)).withinThis(new Availability.Circle("2.646633999999949", "39.57119", 20)).build();
 
-        Availability availability = Availability.builder().checkIn(checkIn).checkOut(checkOut)./* destination("DEU"). */addRoom(availRoom).limitHotelsTo(2).ratesHigherThan(new BigDecimal(priceRange.split("-")[0]))
+        Availability availability = Availability.builder().checkIn(checkIn).checkOut(checkOut)./* destination("DEU"). */addRoom(availRoom).limitHotelsTo(5).ratesHigherThan(new BigDecimal(priceRange.split("-")[0]))
                         .ratesLowerThan(new BigDecimal(priceRange.split("-")[1])).withinThis(new Availability.Circle(longi, lat, 20)).build();
 
         // https://maps.googleapis.com/maps/api/geocode/json?address=Paris&key=AIzaSyBQfNJjW3pfQj-ypeM8OEKs6Rf-vYGrq94

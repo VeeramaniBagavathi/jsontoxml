@@ -34,9 +34,10 @@ public class HotelsController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public HotelBookings testHotel(@RequestParam(value = "numberOfAdults", defaultValue = "1", required = false) String numberOfAdults,
-                    @RequestParam(value = "numberOfChildren", defaultValue = "0", required = false) String numberOfChildren, @RequestParam(value = "lat", required = false) String lat,
-                    @RequestParam(value = "longi") String longi, @RequestParam(value = "priceRange") String priceRange, @RequestParam(value = "checkinDate") String checkinDate,
-                    @RequestParam(value = "checkoutDate") String checkoutDate, @RequestParam(value = "kmsAround") String kmsAround) throws HotelSDKException {
+                    @RequestParam(value = "numberOfChildren", required = false) String numberOfChildren, @RequestParam(value = "lat", defaultValue = "39.57119", required = false) String lat,
+                    @RequestParam(value = "longi", defaultValue = "2.646633999999949", required = false) String longi, @RequestParam(value = "priceRange", defaultValue = "50-350", required = false) String priceRange,
+                    @RequestParam(value = "checkinDate", required = false) String checkinDate, @RequestParam(value = "checkoutDate", required = false) String checkoutDate,
+                    @RequestParam(value = "kmsAround", defaultValue = "20", required = false) String kmsAround) throws HotelSDKException {
 
         HotelBookings hotelBookings = availabilityService.getAvailabilities(numberOfAdults, numberOfChildren, lat, longi, priceRange, checkinDate, checkoutDate);
         return hotelBookings;

@@ -29,13 +29,13 @@ public class AirShoppingResonseMapper {
 		int count = 0;
 		for (ListOfFlightSegmentType flightSegmentType : dataLists.getFlightSegmentList()) {
 			connection = new FlightConnection();
-			connection.setFlightNumber(flightSegmentType.getOperatingCarrier().getFlightNumber().getOperationalSuffix() + " " + flightSegmentType.getOperatingCarrier().getFlightNumber().getValue());
+			connection.setFlightNumber("9A " + flightSegmentType.getOperatingCarrier().getFlightNumber().getValue());
 			connection.setDepartureStation(dataLists.getOriginDestinationList().get(0).getDepartureCode().getValue());
 			connection.setArrivalStation((dataLists.getOriginDestinationList().get(0).getArrivalCode().getValue()));
 			connection.setDepartureDateTime(toDate(flightSegmentType.getDeparture().getDate()) + " " + flightSegmentType.getDeparture().getTime());
 			connection.setArrivalDateTime((toDate(flightSegmentType.getArrival().getDate()) + " " + flightSegmentType.getArrival().getTime()));
 			connection.setPrice(response.getOffersGroup().getAirlineOffers().get(count).getAirlineOffer().get(0).getPricedOffer().getOfferPrice().get(0).getRequestedDate().getPriceDetail().getBaseAmount().getValue().toString());
-			connection.setCurrency(response.getOffersGroup().getAirlineOffers().get(count).getAirlineOffer().get(0).getTotalPrice().getDetailCurrencyPrice().getTotal().getCode());
+			connection.setCurrency("EUR");
 			flightConnections.add(connection);
 		}
 		return flightConnections;
